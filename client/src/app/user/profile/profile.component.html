@@ -1,0 +1,28 @@
+<div *ngIf="isUserDataLoaded" class="user-profile">
+
+  <h1>Profile</h1>
+  <div style="text-align: right">
+    <button mat-flat-button color="primary" (click)="openEditDialog()">Edit Info</button>
+  </div>
+
+  <div style="text-align: center" class="row">
+    <div class="col">
+      <img class="profile-image" [src]="previewImgUrl || formatImage(userProfileImage) || 'https://kinopoisk-ru.clstorage.net/2g9i5g416/c3a4acHsHD/IXN4tcGuGOrH8JOHIwqpgFrrbRTWZxJLXw6Vxg9Eq3_zJQLx-Pq1No4edHg81bqKUtQPtaPNx46AFENjF1XdmzEnP-3R6gWxwLuEzyNQ_9wU9WJCm2dMGBtby5tRdIRR2xQ2k9rcgQvtAG5oPY_i1AyWU-r_w9iZxXIlekJYiekZVF6u8qt6z9Xv86YOC6iyTI9kGO4xOGNZUor6EUOoaPETAbjpzIITwRJYbFKVwewArHfg_-OkqeVHESpPdI_tGHNqn9itcMXIxcquBDW-rEeqUT7JIA9KZXCHwQRvt3nLBwS5_OeME_IVWE52re_1NoNq0_rrvabXXx4Rb2K6wxZ7a7bnlGHI1tnwhhU2hbZtlUIWyAExfX1CiucyTqxB8y8bn-3HgSXhG29KVbDb2S-sc8Xj3ZOt9m89CV11mMs6eke72Zxe3c3Vy4kbKKGqcqJNGcMbPXhJdpPfI0mvRvA_G5HS26Ax4QdWcnyQyvgUpUzIx9C_uOJ7CDFzWYrELWpmgNinQOLL7dmcNyuYiVamShrECQdvQXG87DRPg1jfGhiv5-KvD84RV3RrrOr4Bq9b-8vKl6n-RTQ1U1Si9z5VTZPLrFDo9PXxkisBu6hDrFMw-D4dY1hor_o3eLN_2BwMiu_SqC7RB1FNeIvI7TG8aM3v_b2-1GsIP3Z0oPsFflSm4YR0yNrr8I8qM6GNZoZwJ9gSMmFJcIbcKmO8X_U_Oon894cx8T5WSVag_ssgp0_57c6VuNNhDC9KWp_aHXdkrfuzcNfX9MeKAD2ahFCjaSL7DA1kfEmZ4TVtlWn5PR-00sKXC8QcfHl4puHWKq1E5sfDhozBWw4sT1-F-ABBZrPllFnsxdXZjxMVl6ZQtkEQ6wQdY31mi9cLTYtf9gYwr-DZrynUE1tIdKzR9AWVUMzV3pyR3FgzHXNSp-MCfGqF9LBays3395coPaK_UoRlGsk7GVxKS7XkEHOIQNgzGpvf9rQ78zNdTFKn4eoqslfu286OvORILy5IepvBLVFhnd6xR-73wtyTNTGFn2mTeR3pDTlGUUW46jh7vHHJMjOyztSvAdsaU3trgOzAKq1KytbcmbncfjUwXUmYwyFmdLX8rXfuye7cqzIdubV3iEcD9TE_fVlKmukoUYlT_RgivsTBgivRFnVYZZHE2wmie-_j-ay41kQXMGlfne8PZU2N9pVGyMH17K0tFKemWrNHPu4wMVpyWoj3CWyidNMmEJ_gxpISzAFMXkeNxuwxqnb1z8C4vOFFMDB9WpT3Dn5Omfi-RebWwvGXFAukj3i1RCDHMi9ESXCM9zVetlrcPxyE582rB9ElSU11oPP0FpZJycXhhLrkfhgyVGK2wC5iWoT_mE7q0PT7kzMuibZbtnYI-yE-V1t0svkJeY9h1xgtmenUgTLqIUpwVpf8_giDb9bIxLOjxH4yP1d1nOc9ZXq9yYtH8-T38I0pEKehT5ZLGtYKNm9MW7fLB1uCe_AOGarK77w08DtLTXmr0ukOqF_J-96YqPhuLBV9dqPRJ0RNu_eqV9Xu08iSGg-ZoGW8eSj1GQxvXECnxy5Oq1_eHiWq4820D8wQalNxht_JIbRXycfcl73ZWyw_aUaD7xhmVLDSv3TTzM7UqyQhva1HimwE8z0hdmlCs8cbc4pc_B0HkOznthj1O09rV5Pb4xqJfdb1x6aA1lo4A2BJheg-RXaD0ad94cjQ9b8zF6yiZoZJNNYtD2x_dY3LFF6DYvQSD4va_rYv5x9pa3WMztIKpE3M3eyvgOJhFTBUeqH1NXxbkfmWTujxwe6fNAOmvGWCdTfJJTh6ZW-xwRV-r2TKIQKuwdOULPkCcnFSpc3IJ4R38__6l6bcSDsLfXSB4R9XYIPxtl7p9dnKpgcJmJB0h0sn6gw-XVhms9gAea1B4BEeuMXEnyvZGFNXfYnZ4zCFUOf4yoWBxWoJE0t4nuk1fHyh4a15_efs2KgHIJSteLJNNewCBX1nT5fGNkW-V-0TH5np4LY04BJKanWl3_INt1DZxf6Fmfx9LBlOQKTsD0tPh-KLYO3a4MSxDwGBqW-rTyjtPDNmaEqT3jFhr0LCLBmL3uaiAMAZWkthntvUGqxF0-L6pI3gag4Cd0aD8CVhRL3YrHPLz8jxqikvh7BbtXo19x0abWFvq-gtXpRS6jobq-X5kgXpB2haXo_98SuOcfX90b6u90wbDnZ2iMcAdGW535dU0er72pAFNoGgaJVvP8QfGWphTq_mFX-zdv8SDpbP7YMG1CJta3-C-MkBlEj769m4idFjDxBke77jJHR5rOewUO7259yPCj2jl2inSjvgMRlpZ2Ks3hVejkXfNQCS_NKOK_IFSFVdgc7XMrRF2vr5l4Hjdyw7amu70DpwVaPRsEzE6effsgAUhKNwv08_6yYXeEx1k8cWaK1q_yEBnfLQjAzAAWNsXJ7M_QSHevvt2oCGyngjOE1rv-0CRWK3-6dk6M7tzbAzCqy0Z4pMK8wjH1pJerflC06qQMMfB7jC_YQa1RNgWVCl2f8RkVjN9sSwnMljHDhyU57aM2tGmeaSRtbax-WvKTyMpEmTRD_DHTdjYWua3hdoglzwGiCs6-GlIMs-Y3llo_HAL49N9ODep6f3aCw1Q1ap2wBEYJLQuHDg7vvqsBo3io5YhEgH8CM8QHpsv8gXeqNq8xkYsfv6qjPgMnpaWrfO8jWAWfLqwbON6nkcP112hsg7ekKj3LhZ0vDZ3KQNHqaCda9kHcU9Nn9iVb3eO2auaf03Cqne-LE61SJWR1ao784zg03S2MOGmdxqHBFjRZ_TJnBrlcuRR8bH6OS3NAa7qXimdzTvIR9jflWV_gJqmWXcIDCP5PCIAPc5emt-q8HyLL5Q18_jgKHaRBwpQGWP5iJLXrzyt1fk1_P2tRQUppdHiHIVySAdfnlaltcXRZdewgYukPL6izXaD050WJPB_RWUc8727rWn6lc#DSD'" alt="User image">
+
+      <input type="file" style="display: none;" #fileInput (change)="onFileSelected($event)">
+
+      <button mat-button (click)="fileInput.click()">Pick file</button>
+      <button mat-button *ngIf="selectedFile" (click)="onUpload()">Upload</button>
+    </div>
+    <div class="col" style="text-align: left">
+
+      <h2>{{user.userName}}</h2>
+
+      <h3 style="">{{user.firstName}} {{user.lastName}}</h3>
+      <p>{{user.bio}}</p>
+    </div>
+
+    <mat-divider style="margin: 2rem 0"></mat-divider>
+    <router-outlet></router-outlet>
+  </div>
+</div>
